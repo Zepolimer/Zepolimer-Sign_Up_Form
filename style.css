@@ -1,0 +1,214 @@
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+
+  --blue: hsl(248, 32%, 49%);
+
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+}
+
+*,
+*:before,
+*:after {
+  margin: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  background-image: url(./images/bg-intro-mobile.png);
+  background-color: var(--red);
+}
+
+.main-container {
+  width: 280px;
+  margin: auto;
+}
+
+/* FIRST PART with title & description */
+.title {
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+  line-height: 1.8rem;
+  padding: 0px 30px;
+  margin-top: 70px;
+}
+.about {
+  font-size: 14px;
+  color: white;
+  margin-bottom: 50px;
+}
+
+/* BLUE container about price & delay */
+.blue-container {
+  background-color: var(--blue);
+  padding: 17px 0px;
+  border-radius: 10px;
+  box-shadow: 0px 6px hsla(249, 10%, 26%, 0.178);
+}
+.try-it {
+  color: white;
+  font-size: 12px;
+  font-weight: 400;
+  margin: auto 50px;
+}
+.bold {
+  font-weight: 700;
+}
+
+/* FORM contents */
+form {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 6px hsla(249, 10%, 26%, 0.178);
+  margin-top: 20px;
+}
+fieldset {
+  border: none;
+}
+input {
+  width: 85%;
+  height: 2.5rem;
+  border-radius: 5px;
+  border: 1px solid var(--grayish-blue);
+  margin: 5px auto;
+  outline: none;
+}
+#firstname {
+  margin-top: 15px;
+}
+
+/* PLACEHOLDER change font, size */
+#firstname::placeholder,
+#lastname::placeholder,
+#email::placeholder,
+#password::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  padding-left: 15px;
+}
+
+/* ERRORS MESSAGES */
+.error-icon {
+  background-image: url(./images/icon-error.svg);
+  background-repeat: no-repeat;
+  background-position: 97% 49%;
+  border: 2px solid hsl(0, 100%, 74%) !important;
+}
+
+.error {
+  color: hsl(0, 100%, 74%);
+  margin-right: 10px;
+  margin-bottom: 10px;
+  float: right;
+  font-size: 9px;
+}
+
+/* BUTTON */
+.btn {
+  width: 80%;
+  background-color: var(--green);
+  box-shadow: 0px 2px hsl(154, 86%, 28%);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  height: 2.8rem;
+
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.2vw;
+  color: white;
+  font-weight: 600;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+/* TERMS & SERVICES */
+.agree {
+  font-size: 9px;
+  color: var(--grayish-blue);
+  padding: 5px 40px 20px 40px;
+}
+.terms {
+  color: var(--red);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* FOOTER */
+.attribution {
+  font-size: 10px;
+  text-align: center;
+  margin-top: 40px;
+}
+.attribution a {
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+}
+
+/* DESKTOP DESIGN */
+@media (min-width: 850px) {
+  .main-container {
+    width: 80vw;
+    height: 90%;
+    display: grid;
+    grid-template-columns: 1fr 37.5vw;
+    grid-template-rows: 80px auto;
+    margin-top: 15vh;
+  }
+
+/* TITLE & TEXT GRID */
+  .content {
+    grid-row: 2;
+    grid-column: 1;
+  }
+
+  .title {
+    font-size: 50px;
+    line-height: 3rem;
+    text-align: left;
+    margin-top: 22.61vh;
+    margin-left: 10px;
+  }
+  .about {
+    font-size: 16px;
+    text-align: left;
+    margin: auto 40px;
+  }
+
+/* BLUE CONTAINER GRID */
+  .blue-container {
+    grid-row: 1;
+    grid-column: 2;
+    height: 30px;
+  }
+  .try-it {
+    font-size: 16px;
+  }
+
+/* FORM GRID */
+  form {
+    grid-row: 2;
+    grid-column: 2;
+  }
+
+  input {
+    width: 83%;
+    height: 3.5rem;
+    margin: 10px auto;
+  }
+
+  #firstname {
+    margin-top: 35px;
+  }
+
+  .attribution {
+    display: none;
+  }
+
+}

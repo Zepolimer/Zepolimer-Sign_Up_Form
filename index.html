@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+
+    <title>Frontend Mentor | Intro component with sign up form</title>
+  </head>
+
+  <body>
+    <div class="main-container">
+      <div content>
+    <p class="title">Learn to code by watching others</p>
+
+    <p class="about">
+      See how experienced developers solve problems in real-time. Watching
+      scripted tutorials is great, but understanding how developers think is
+      invaluable.
+    </p>
+  </div>
+
+    <div class="blue-container"><p class="try-it"><span class="bold">Try it free 7 days</span> then $20/mo. thereafter</p></div>
+
+    <form id="myForm" method="post" action="/" novalidate>
+      <fieldset>
+        <div class="form-group">
+          <label id="first-name" for="name"></label>
+          <input
+              type="text"
+              name="firstname"
+              id="firstname"
+              class="form-control"
+              placeholder="First Name"
+              required
+            /></div>
+        <div class="form-group">
+          <label id="last-name" for="name"></label>
+          <input
+          type="text"
+          name="lastname"
+          id="lastname"
+          class="form-control"
+          placeholder="Last Name"
+          pattern="[A-Za-z]"
+          required
+        /></div>
+        <div class="form-group">
+          <label id="email-adress" for="email"></label>
+          <input
+          type="email"
+          name="email"
+          id="email"
+          class="form-control"
+          placeholder="Email Address"
+          required
+        /></div>
+        <div class="form-group">
+          <label id="password-label" for="password"></label>
+          <input
+          type="password"
+          name="password"
+          id="password"
+          class="form-control"
+          placeholder="Password"
+          required
+        /></div>
+      </fieldset>
+
+      <button class="btn">Claim your free trial</button>
+
+      <p class="agree">By clicking the button, you are agreeing to our
+      <a class="terms" href="#" target="_blank">Terms and Services</a></p>
+    </form>
+  </div>
+
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://github.com/Zepolimer?tab=repositories">Remi Lopez</a>.
+      </p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
