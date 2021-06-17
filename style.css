@@ -11,7 +11,9 @@
 *,
 *:before,
 *:after {
-  margin: border-box;
+  margin: 0;
+  padding: 0;
+  border: border-box;
 }
 
 body {
@@ -22,38 +24,53 @@ body {
 }
 
 .main-container {
-  width: 280px;
+  width: 88%;
   margin: auto;
+}
+@media (min-width: 760px) {
+  .main-container {
+    width: 80%;
+  }
+}
+@media (min-width: 1020px) {
+  .main-container {
+    width: 76%;
+    margin: 20px auto;
+  }
 }
 
 /* FIRST PART with title & description */
 .title {
-  font-size: 22px;
+  font-size: 27px;
   font-weight: 600;
   color: white;
-  line-height: 1.8rem;
-  padding: 0px 30px;
-  margin-top: 70px;
+  line-height: 1.4em;
+  margin: 96px 30px 20px 30px;
 }
 .about {
-  font-size: 14px;
+  font-size: 16px;
   color: white;
-  margin-bottom: 50px;
+  margin: 0 10px 60px 10px;
+  line-height: 1.8em;
 }
 
 /* BLUE container about price & delay */
 .blue-container {
   background-color: var(--blue);
-  padding: 17px 0px;
+  width: 100%;
+  height: 90px;
   border-radius: 10px;
   box-shadow: 0px 6px hsla(249, 10%, 26%, 0.178);
+  display: flex;
+  justify-content: center;
 }
 .try-it {
   color: white;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 400;
   margin: auto 50px;
 }
+
 .bold {
   font-weight: 700;
 }
@@ -63,21 +80,22 @@ form {
   background-color: white;
   border-radius: 10px;
   box-shadow: 0px 6px hsla(249, 10%, 26%, 0.178);
-  margin-top: 20px;
+  margin-top: 25px;
+  height: auto;
 }
 fieldset {
   border: none;
 }
 input {
-  width: 85%;
-  height: 2.5rem;
+  width: 90%;
+  height: 3.5rem;
   border-radius: 5px;
   border: 1px solid var(--grayish-blue);
-  margin: 5px auto;
+  margin: 10px auto;
   outline: none;
 }
 #firstname {
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 /* PLACEHOLDER change font, size */
@@ -86,7 +104,7 @@ input {
 #email::placeholder,
 #password::placeholder {
   font-family: "Poppins", sans-serif;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 600;
   padding-left: 15px;
 }
@@ -101,23 +119,23 @@ input {
 
 .error {
   color: hsl(0, 100%, 74%);
-  margin-right: 10px;
+  margin-right: 15px;
   margin-bottom: 10px;
   float: right;
-  font-size: 9px;
+  font-size: 11px;
 }
 
 /* BUTTON */
 .btn {
-  width: 80%;
-  background-color: var(--green);
-  box-shadow: 0px 2px hsl(154, 86%, 28%);
   border: none;
   outline: none;
+  width: 90%;
+  height: 3.5rem;
+  background-color: var(--green);
+  box-shadow: 0px 2px hsl(154, 86%, 28%);
   border-radius: 5px;
-  height: 2.8rem;
 
-  font-size: 12px;
+  font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 0.2vw;
   color: white;
@@ -130,9 +148,10 @@ input {
 
 /* TERMS & SERVICES */
 .agree {
-  font-size: 9px;
+  font-size: 11px;
   color: var(--grayish-blue);
-  padding: 5px 40px 20px 40px;
+  margin: 20px 20px;
+  padding: 0 0 25px 0;
 }
 .terms {
   color: var(--red);
@@ -152,14 +171,14 @@ input {
 }
 
 /* DESKTOP DESIGN */
-@media (min-width: 850px) {
+@media (min-width: 1050px) {
   .main-container {
-    width: 80vw;
+    width: 80%;
     height: 90%;
+    margin: 80px auto;
     display: grid;
     grid-template-columns: 1fr 37.5vw;
     grid-template-rows: 80px auto;
-    margin-top: 15vh;
   }
 
 /* TITLE & TEXT GRID */
@@ -169,26 +188,27 @@ input {
   }
 
   .title {
-    font-size: 50px;
-    line-height: 3rem;
+    font-size: 54px;
+    line-height: 4rem;
     text-align: left;
     margin-top: 22.61vh;
     margin-left: 10px;
   }
   .about {
-    font-size: 16px;
+    font-size: 17px;
     text-align: left;
-    margin: auto 40px;
+    margin: 30px 40px 0 10px;
   }
 
 /* BLUE CONTAINER GRID */
   .blue-container {
     grid-row: 1;
     grid-column: 2;
-    height: 30px;
+    height: auto;
   }
   .try-it {
     font-size: 16px;
+    align-self: center;
   }
 
 /* FORM GRID */
@@ -197,7 +217,7 @@ input {
     grid-column: 2;
   }
 
-  input {
+  input, .btn {
     width: 83%;
     height: 3.5rem;
     margin: 10px auto;
